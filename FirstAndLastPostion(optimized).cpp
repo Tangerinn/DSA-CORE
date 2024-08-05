@@ -17,14 +17,14 @@ while(start<=end)
       start=mid+1;
     }
       //narrows down search-space
-    else if(target>nums[mid])
+    else if(target<nums[mid])
     {
       end=mid-1;
     }
     if(target==nums[mid])
       {
         ans=mid; 
-        if(boolean)//for leftmost
+        if(boolean==true)//for leftmost
         {
         end=mid-1; 
         }
@@ -36,21 +36,10 @@ while(start<=end)
   }
 return ans;
 }
-//function to search for the range
-int searchRange(vector<int>nums, int target)
-{
-  int ans[]={-1,-1};
-  //search for leftmost occurence fisrt
-  ans[0]=search(nums,target,true);
-  if(ans[0]!=-1)
-  {
-    ans[1]=search(nums,target,false);
-  }
-  return ans[0] && ans[1];
-}
 
 int main() {
  vector<int>nums={1,2,2,3,3,3,3,4,4,4,6}; //initialised a sample array.
-int target=2;
-  cout<<"Index range of "<<target<<" : "<<searchRange(nums,target);
+int target=4;
+  cout<<"Index range of "<<target<<" : "<<search(nums,target, true)<<", "<<search(nums,target, false);
+
 }
