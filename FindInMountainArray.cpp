@@ -75,8 +75,8 @@ int main()
     if (ans == -1)
     {
         ans = binarySearch(peak+1, mount.size() - 1, target, mount, false); 
-        //"peak+1" : the "+1" is important. We have considered the peak'th element in the "icreasing portion" pf array. 
-        //So the decreasing part must start from "peak+1"th index.
+        //"peak+1" : the "+1" is important. We have considered the peak'th element in the "icreasing portion" of thearray. 
+        //So, the decreasing part must start from "peak+1"th index.
     }
         cout << "Index of lowest occurence of " << target << " : " << ans;
 
