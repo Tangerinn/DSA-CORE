@@ -39,3 +39,17 @@
 
 # debug information files
 *.dwo
+
+# For java and python's trash files: 
+
+# --- Added Python Rules ---
+__pycache__/
+*.py[cod]
+.venv/
+
+# --- Added Java Rules ---
+*.class
+*.jar
+*.war
+bin/
+.metadata/
