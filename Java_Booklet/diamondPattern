@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Demo
+{
+    public static void main(String[] args)
+    {
+       
+        Scanner input= new Scanner(System.in);
+        System.out.print("Enter a number = ");
+        int n= input.nextInt();
+
+        // logic begins
+
+        // triangle 1 : 
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<n-1-i; j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0; k<=i; k++)
+            {
+                System.out.print("* "); // the space here is important.
+            }
+            System.out.println();
+        }
+
+        // triangle 2 : 
+        for(int i=0; i<n-1; i++) // n became n-1
+        {
+            for(int j=0; j<=i; j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0; k<=n-2-i; k++)
+            {
+                System.out.print("* "); // the space here is important.
+            }
+            System.out.println();
+        }
+
+    }
+}

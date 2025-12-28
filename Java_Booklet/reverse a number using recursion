@@ -1,0 +1,24 @@
+class Reverse1 
+{
+    static int reversed = 0;
+
+    static void reverse(int n)
+     {
+
+        if (n == 0) 
+        {
+            System.out.print("Reversed number is : " + reversed);
+            return;
+        }
+        int remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        reverse(n / 10);
+
+    }
+
+    public static void main(String[] args)
+     {
+        int n = 1191;
+        reverse(n);
+    }
+}
